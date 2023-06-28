@@ -1,0 +1,30 @@
+{
+	"manifest_version": 2,
+	"name": "AntiScamExtension",
+	"version": "1.0",
+
+	"description": "Warns you when you are visiting a site that has been reported for phishing",
+
+	"icons": {
+		"48": "icons/border-48.png"
+	},
+
+	"permissions": [
+		"storage"
+	],
+
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "peterrushton418@gmail.com",
+			"strict_min_version": "42.0"
+		}
+	},
+	  
+
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["script.js"]
+		}
+	]
+}
